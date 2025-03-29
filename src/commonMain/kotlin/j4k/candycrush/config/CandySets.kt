@@ -30,6 +30,18 @@ suspend fun donuts(): CandySprites {
 }
 
 /**
+ * [SpriteBatch] with braces candies
+ */
+suspend fun braces(): CandySprites {
+    return CandySprites(
+        name = "braces",
+        spriteSize = 244, columns = 4, rows = 4, bitmap = loadImage("images/candy_braces.png")
+    ).apply {
+        tilesMap = mapOf(Tile.A to 3, Tile.B to 0, Tile.C to 7, Tile.D to 4, Tile.E to 15)
+    }
+}
+
+/**
  * [SpriteBatch] with the first letters of all [Tile]s. Useful for debugging.
  */
 suspend fun testTiles(): TestSprites {
