@@ -53,7 +53,7 @@ suspend fun main() = Korge(
 ) {
     Logger.defaultLevel = logLevel
 
-    val candies: CandySprites = donuts() // try: fruits()
+    val candies: CandySprites = braces() // try: fruits()
 
     val injector = AsyncInjector().also {
         it.mapInstance(this)
