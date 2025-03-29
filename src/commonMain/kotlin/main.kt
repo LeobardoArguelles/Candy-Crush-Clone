@@ -6,6 +6,11 @@ import com.soywiz.korge.view.*
 import com.soywiz.korgw.*
 import com.soywiz.korim.color.*
 import com.soywiz.korinject.*
+import com.soywiz.korio.file.std.resourcesVfs
+import com.soywiz.korim.format.readBitmap
+
+import kotlinx.coroutines.delay
+
 import j4k.candycrush.*
 import j4k.candycrush.audio.*
 import j4k.candycrush.compontens.*
@@ -51,6 +56,18 @@ suspend fun main() = Korge(
     width = windowResolution.width, height = windowResolution.height, bgcolor = backgroundColor, debug = debug,
     quality = GameWindow.Quality.QUALITY
 ) {
+    // Load and display the splash image
+    val splash = image(resourcesVfs["images/splash.png"].readBitmap()) {
+        // Optionally, center or scale the image
+        position((virtualResolution.width - this.width) / 2, (virtualResolution.height - this.height) / 2)
+    }
+
+    // Show splash for 3 seconds
+    delay(3000)
+
+    // Remove the splash screen
+    splash.removeFromParent()
+
     Logger.defaultLevel = logLevel
 
     val candies: CandySprites = braces() // try: fruits()
