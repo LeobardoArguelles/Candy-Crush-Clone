@@ -1,0 +1,30 @@
+[
+	{
+		"name": "candy.fnt",
+		"size": 25068,
+		"modifiedTime": 1742842723380,
+		"createTime": 1742842723380,
+		"isDirectory": false
+	},
+	{
+		"name": "candy.png",
+		"size": 357515,
+		"modifiedTime": 1742842723380,
+		"createTime": 1742842723380,
+		"isDirectory": false
+	},
+	{
+		"name": "candy-small.png",
+		"size": 67585,
+		"modifiedTime": 1742842723380,
+		"createTime": 1742842723380,
+		"isDirectory": false
+	},
+	{
+		"name": "candy-small.fnt",
+		"size": 22819,
+		"modifiedTime": 1742842723380,
+		"createTime": 1742842723380,
+		"isDirectory": false
+	}
+]
